@@ -1,7 +1,7 @@
 # AntiVirus
 
-![image](https://user-images.githubusercontent.com/54809176/202856296-3a06f408-f037-46ef-ad7c-968f3ff7b188.png)
+![image](https://user-images.githubusercontent.com/54809176/202870199-1cd3d99b-cb8b-43a7-a108-7da45537b7f7.png)
 
-![image](https://user-images.githubusercontent.com/54809176/202856314-4d82e23a-a4ca-469a-8f71-ef0351c520a4.png)
+![image](https://user-images.githubusercontent.com/54809176/202870225-bd04fd98-f420-444e-9bb1-a0c1825be40a.png)
 
-![image](https://user-images.githubusercontent.com/54809176/202856344-e5ab5314-ec87-4d5a-8794-e25e548e53b8.png)
+![image](https://user-images.githubusercontent.com/54809176/202870246-795236dc-e4df-4103-ab9e-c082b05e091b.png)

@@ -366,7 +366,6 @@ bool openFileDialog(TCHAR szFileName[])
 	{
 
 		MessageBox(NULL, "Opening filepath", "SUCCESS !!!", MB_OK);
-
 		return 1;
 	}
 	else
@@ -404,6 +403,7 @@ void scan()
 		file << openFileName << " " << md5(openFileName) << " Infected " << "\n";
 		file.close();
 		scanFile = md5(openFileName) + " Infected";
+		remove(openFileName);
 	}
 	else
 	{
@@ -447,6 +447,7 @@ void fastScan()
 			file << entry.path().string().c_str() << " " << md5(entry.path().string()) << " Infected " << "\n";
 			file.close();
 			scanFile = entry.path().string().c_str() + ' ' + md5(entry.path().string()) + " Infected ";
+			remove(entry.path().string().c_str());
 		}
 		else
 		{
@@ -492,6 +493,7 @@ void scanAll()
 					file << entry->path().string().c_str() << " " << md5(entry->path().string()) << " Infected " << "\n";
 					file.close();
 					scanFile = entry->path().string().c_str() + ' ' + md5(entry->path().string()) + " Infected ";
+					remove(entry->path().string().c_str());
 				}
 				else
 				{

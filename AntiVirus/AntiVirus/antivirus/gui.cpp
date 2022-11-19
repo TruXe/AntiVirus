@@ -309,6 +309,15 @@ void gui::Render() noexcept
 				std::thread run(fastScan);
 				run.detach();
 			}
+			ImGui::SetCursorPos(ImVec2(436, 27));
+			if (ImGui::Button("RESETLOG", ImVec2(150, 100)))
+			{
+				std::ofstream file;
+				std::string result = "result.txt";
+				file.open(result.c_str(), std::ios::trunc);
+				file << "";
+				file.close();
+			}
 			if (ImGui::Button("FULLSCAN", ImVec2(150, 100)))
 			{
 					Tab = 3;

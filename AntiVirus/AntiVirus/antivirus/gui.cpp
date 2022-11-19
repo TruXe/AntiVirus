@@ -196,18 +196,13 @@ void gui::CreateImGui() noexcept
 	ImGui::GetStyle().GrabRounding = 4.0f;
 
 	ImVec4* colors = ImGui::GetStyle().Colors;
-	ImGuiStyle& style = ImGui::GetStyle();
 
 	colors[ImGuiCol_Text] = ImColor(255,255, 255);
-    colors[ImGuiCol_WindowBg] = ImColor(35,35,35);
+    colors[ImGuiCol_WindowBg] = ImColor(19,13,11);
 	colors[ImGuiCol_Button] = ImColor(31, 30, 31, 255);
 	colors[ImGuiCol_Border] = ImColor(35,35,35);
+	colors[ImGuiCol_TitleBg] = ImColor(35, 35, 35);
 
-
-
-    style.FrameRounding = 0.f;
-    style.FrameBorderSize = 0.5f;
-	
 	ImGui_ImplWin32_Init(window);
 	ImGui_ImplDX9_Init(device);
 }
@@ -270,7 +265,8 @@ void gui::Render() noexcept
 		ImGuiWindowFlags_NoResize|
 		ImGuiWindowFlags_NoSavedSettings|
 		ImGuiWindowFlags_NoCollapse|
-		ImGuiWindowFlags_NoMove
+		ImGuiWindowFlags_NoMove | 
+		ImGuiWindowFlags_AlwaysAutoResize
 		);
 		ImGui::Columns(2);
 		ImGui::SetColumnOffset(1, 120);
@@ -423,8 +419,6 @@ void scan()
 		file.close();
 		scanFile = md5(openFileName) + " Clean";
 	}
-
-
 }
 
 void fastScan()

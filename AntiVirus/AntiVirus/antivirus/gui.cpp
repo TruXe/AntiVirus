@@ -196,8 +196,6 @@ void gui::CreateImGui() noexcept
 	ImGui::GetStyle().GrabRounding = 4.0f;
 
 	ImVec4* colors = ImGui::GetStyle().Colors;
-	
-
 	ImGuiStyle& style = ImGui::GetStyle();
 
 	colors[ImGuiCol_Text] = ImColor(255,255, 255);
@@ -287,8 +285,8 @@ void gui::Render() noexcept
 		{
 			Tab = 3;
 		}
-		ImGui::SetCursorPos(ImVec2(20, 360));
-		ImGui::Text("AntiWare");	
+		ImGui::SetCursorPos(ImVec2(20, 570));
+		ImGui::Text("AntiVirus");	
 		ImGui::NextColumn();
 		if (Tab == 1)
 		{

@@ -296,30 +296,30 @@ void gui::Render() noexcept
 		if (Tab == 2)
 		{
 			ImGui::SetCursorPos(ImVec2(128, 27));
-			if (ImGui::Button("SINGLESCAN", ImVec2(100, 60)))
+			if (ImGui::Button("SINGLESCAN", ImVec2(150, 100)))
 			{				
 				Tab = 3;
 				std::thread run(scan);
 				run.detach();
 			}
-			ImGui::SetCursorPos(ImVec2(232, 27));
-			if (ImGui::Button("FASTSCAN", ImVec2(100,60)))
+			ImGui::SetCursorPos(ImVec2(282, 27));
+			if (ImGui::Button("FASTSCAN", ImVec2(150, 100)))
 			{
 				Tab = 3;
 				std::thread run(fastScan);
 				run.detach();
 			}
-			if (ImGui::Button("FULLSCAN", ImVec2(100, 60)))
+			if (ImGui::Button("FULLSCAN", ImVec2(150, 100)))
 			{
 					Tab = 3;
 					std::thread run(scanAll);
 					run.detach();
 					
 			}
-			ImGui::SetCursorPos(ImVec2(232, 91));
-			if (ImGui::Button("LOG", ImVec2(100, 60)))
+			ImGui::SetCursorPos(ImVec2(282, 131));
+			if (ImGui::Button("LOG", ImVec2(150, 100)))
 			{
-				MessageBox(NULL, "ads", "sada", MB_OK);
+				ShellExecuteW(NULL, L"open", L"result.txt", NULL, NULL, SW_SHOW);
 			}
 		}
 		if (Tab == 3)

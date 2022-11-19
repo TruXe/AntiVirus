@@ -200,8 +200,10 @@ void gui::CreateImGui() noexcept
 
 	colors[ImGuiCol_Text] = ImColor(255,255, 255);
     colors[ImGuiCol_WindowBg] = ImColor(35,35,35);
-	colors[ImGuiCol_Button] = ImColor(45,45,45);
+	colors[ImGuiCol_Button] = ImColor(31, 30, 31, 255);
 	colors[ImGuiCol_Border] = ImColor(35,35,35);
+
+
 
     style.FrameRounding = 0.f;
     style.FrameBorderSize = 0.5f;
@@ -455,7 +457,7 @@ void fastScan()
 			file.open(result.c_str(), std::ios_base::app);
 			file << entry.path().string().c_str() << " " << md5(entry.path().string()) << " Infected " << "\n";
 			file.close();
-			scanFile = entry.path().string().c_str() + ' ' + md5(entry.path().string()) + " Infected ";
+			scanFile = entry.path().string() + " Infected ";
 			remove(entry.path().string().c_str());
 		}
 		else
@@ -463,7 +465,7 @@ void fastScan()
 			file.open(result.c_str(), std::ios_base::app);
 			file << entry.path().string().c_str() << " " << md5(entry.path().string()) << " Clean " << "\n";
 			file.close();
-			scanFile = entry.path().string().c_str() + ' ' + md5(entry.path().string()) + " Clean ";
+			scanFile = entry.path().string() + " Clean ";
 
 		}
 	}
@@ -501,7 +503,7 @@ void scanAll()
 					file.open(result.c_str(), std::ios_base::app);
 					file << entry->path().string().c_str() << " " << md5(entry->path().string()) << " Infected " << "\n";
 					file.close();
-					scanFile = entry->path().string().c_str() + ' ' + md5(entry->path().string()) + " Infected ";
+					scanFile = entry->path().string() + " Infected ";
 					remove(entry->path().string().c_str());
 				}
 				else
@@ -509,7 +511,7 @@ void scanAll()
 					file.open(result.c_str(), std::ios_base::app);
 					file << entry->path().string().c_str() << " " << md5(entry->path().string()) << " Clean " << "\n";
 					file.close();
-					scanFile = entry->path().string().c_str() + ' ' + md5(entry->path().string()) + " Clean ";
+					scanFile = entry->path().string() + " Clean ";
 					
 				}
 			}
